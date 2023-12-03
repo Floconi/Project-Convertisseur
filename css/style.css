@@ -1,0 +1,26 @@
+.input{
+    display: flex;
+    justify-content: center;
+}
+td input{
+   display: flex;
+   align-items: center;
+}
+
+.titre{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton{
+    padding-left: 104px;
+}
+
+#fleche_droite{
+    width: 100%;
+}
+
+#fleche_gauche{
+    width: 100%;
+}

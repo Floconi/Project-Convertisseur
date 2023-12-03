@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertiseur Euros-Franc</title>
+    <script src="js/script.js"></script> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--
+    <script>
+        function Convertir() {
+        var prix_euros ;
+        var prix_francs ;
+        const conversion_euro_franc = 6.55957;
+        var type_de_conversion;
+        var input_euros = document.getElementById("montant_a_convertir_euro");
+        var input_francs = document.getElementById("montant_a_convertir_franc");
+        console.log(input_francs.value)
+        if  (input_francs.value == '') {
+            prix_francs = input_euros.value * conversion_euro_franc;
+            input_francs.value = prix_francs;
+        }
+        else {
+            prix_euros = input_francs.value / conversion_euro_franc
+            input_euros.value =  prix_euros;
+        }
+        
+        }
+
+        function reset(){
+            var input_euros = document.getElementById("montant_a_convertir_euro");
+            var input_francs = document.getElementById("montant_a_convertir_franc");
+            var boutton = document.getElementById("bouton")
+            input_euros.value = ''
+            input_francs.value = ''
+            gestionsaisie()
+
+        }
+
+        function gestionsaisie() {
+            var input_euros = document.getElementById("montant_a_convertir_euro");
+            var input_francs = document.getElementById("montant_a_convertir_franc");
+            if (input_euros.value != ''){
+
+                input_francs.disabled= true ;
+            }
+            else {
+                if (input_francs.value != ''){
+                    input_euros.disabled =  true ;
+                }
+                else {
+                    input_francs.disabled = false ;
+                    input_euros.disabled = false ; 
+                }
+            }
+        }
+        /*if (type_de_conversion==1){
+            document.writeln("<h1>")
+            document.writeln("Convertiseur Euros vers francs")
+            document.writeln("</h1>")
+            prix_euro = prompt("Quel est le motant en euros à convertir ?",10);
+            prix_franc = prix_euro * conversion_euro_franc;
+            document.writeln("La somme converti de "+prix_euro+" euros est de : "+prix_franc+" francs" )
+        }
+        else{
+            if(type_de_conversion==2){
+                document.writeln("<h1>")
+                document.writeln("Convertiseur Franc vers Euros")
+                document.writeln("</h1>")
+                prix_franc = prompt("Quel est le montant en franc à convertir ?",10)
+                prix_euro = prix_franc / conversion_euro_franc;
+                document.writeln("La somme converti de "+prix_franc+" francs est de : "+prix_euro+" euros" ) 
+            }
+            else{
+                
+                document.writeln("Vous avez rentré "+type_de_conversion+" c'est une valeur incorecte. Il faut saisir soit 1[euros -> franc] ou 2 [francs -> euros]. Veuillez actualiser la page pour recommencer")
+            }  
+        }
+            return 
+        }
+       */
+        
+        
+    </script> -->
+    
+   
+    <table>
+        <tr>
+            <td>
+
+            </td>
+            <td class = titre>
+                <h1>Convertiseur de monnaie</h1>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/image_1euro.jpg" >
+            </td>
+            <td>
+                
+                <img id="fleche_droite" src="images/flèche_vers_la_droite.jpg" >
+                <img  id="fleche_gauche" src = "images/flèche_vers_la_gauche.jpg">
+                <script>
+                    var fleche_droite = document.getElementById("fleche_droite")
+                    var fleche_gauche = document.getElementById("fleche_gauche")
+                    fleche_droite.style.display = "none";
+                    fleche_gauche.style.display = "none";
+                </script>
+            </td>
+            <td>
+                <img src="images/image_1_franc.jpg">
+            </td>
+        </tr>
+        <tr class="form" >
+            <td class="input" >
+                    <input type="text" id="montant_a_convertir_euro" placeholder="Entrer le montant en euros"  onchange="gestionsaisie()" >
+            </td>
+            <td class ="bouton">
+                <button  onclick="Convertir()">Convertir </button>
+                <button  onclick="reset()">Reset</button>
+            </td>
+            <td class="input"> 
+                <input type="text" id="montant_a_convertir_franc" placeholder="Entrer le montant en francs"  onchange="gestionsaisie()" >
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
